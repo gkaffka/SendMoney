@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SendMoney</string>
+    <string name="user_email">neo@neon.com</string>
+    <string name="user_name">Neo Neon</string>
+    <string name="user_avatar_url">http://i.imgur.com/XpjOct2.gif</string>
+    <string name="money_sent_history">Histórico de envios</string>
+    <string name="send_money">Enviar dinheiro</string>
+    <string name="loading">Loading…</string>
+    <string name="error">system failure</string>
 </resources>

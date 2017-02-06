@@ -12,7 +12,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
- * Created by gabri on 04/02/2017.
+ * Created by kaffka on 04/02/2017.
  */
 
 public class SendMoneyJob {

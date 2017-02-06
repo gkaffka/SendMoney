@@ -5,7 +5,7 @@ import com.sendmoney.kaffka.sendmoney.models.Transfer;
 import java.util.List;
 
 /**
- * Created by gabri on 04/02/2017.
+ * Created by kaffka on 04/02/2017.
  */
 
 public interface GetTransfersCallback {

@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 import com.google.gson.Gson;
 
 /**
- * Created by gabri on 04/02/2017.
+ * Created by kaffka on 04/02/2017.
  */
 
 public class Preferences {

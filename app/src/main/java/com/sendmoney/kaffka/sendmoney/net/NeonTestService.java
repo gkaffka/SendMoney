@@ -12,13 +12,13 @@ import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 /**
- * Created by gabri on 04/02/2017.
+ * Created by kaffka on 04/02/2017.
  */
 
 public interface NeonTestService {
 
     @GET("/GenerateToken")
-    Call<String> getToken(@Query("name") String name, @Query("email") String email);
+    Call<String> getToken(@Query("nome") String name, @Query("email") String email);
 
     @FormUrlEncoded
     @POST

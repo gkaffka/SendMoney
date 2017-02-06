@@ -3,7 +3,7 @@ package com.sendmoney.kaffka.sendmoney.models;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by gabri on 04/02/2017.
+ * Created by kaffka on 04/02/2017.
  */
 
 public class Transfer {

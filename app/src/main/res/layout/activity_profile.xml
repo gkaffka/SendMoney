@@ -63,6 +63,7 @@
             <Button
                 style="@style/ButtonStyleRed"
                 android:layout_marginTop="32dp"
+                android:onClick="@{viewmodel.sendMoneyToContactClick}"
                 android:text="@string/send_money"/>
 
             <Button

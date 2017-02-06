@@ -8,19 +8,25 @@
     </style>
 
     <style name="ButtonStyleRed" parent="Base.Widget.AppCompat.Button">
-        <item name="android:layout_width">200dp</item>
-        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_marginLeft">32dp</item>
+        <item name="android:layout_marginRight">32dp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">serif-monospace</item>
         <item name="android:backgroundTint">@color/red_pill</item>
     </style>
 
     <style name="ButtonStyleBlue" parent="Base.Widget.AppCompat.Button">
-        <item name="android:layout_width">200dp</item>
-        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">32dp</item>
+        <item name="android:layout_marginRight">32dp</item>
+        <item name="android:layout_height">55dp</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:fontFamily">serif-monospace</item>
         <item name="android:backgroundTint">@color/blue_pill</item>
     </style>
@@ -30,4 +36,10 @@
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:fontFamily">serif-monospace</item>
     </style>
+
+    <style name="TextStyleInitials" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">serif-monospace</item>
+    </style>
+
 </resources>

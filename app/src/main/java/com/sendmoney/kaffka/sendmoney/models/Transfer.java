@@ -2,13 +2,11 @@ package com.sendmoney.kaffka.sendmoney.models;
 
 import com.google.gson.annotations.SerializedName;
 
-import io.realm.RealmObject;
-
 /**
  * Created by kaffka on 04/02/2017.
  */
 
-public class Transfer extends RealmObject {
+public class Transfer {
 
     @SerializedName("Id")
     private long id;
@@ -19,12 +17,12 @@ public class Transfer extends RealmObject {
     @SerializedName("Token")
     private String token;
     @SerializedName("Data")
-    private double data;
+    private String data;
 
     public Transfer() {
     }
 
-    public Transfer(long id, long clientId, double value, String token, double data) {
+    public Transfer(long id, long clientId, double value, String token, String data) {
         this.id = id;
         this.clientId = clientId;
         this.value = value;
@@ -48,7 +46,7 @@ public class Transfer extends RealmObject {
         return token;
     }
 
-    public double getData() {
+    public String getData() {
         return data;
     }
 
@@ -68,7 +66,7 @@ public class Transfer extends RealmObject {
         this.token = token;
     }
 
-    public void setData(double data) {
+    public void setData(String data) {
         this.data = data;
     }
 }

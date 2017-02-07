@@ -7,7 +7,6 @@ import com.sendmoney.kaffka.sendmoney.SendMoneyApplication;
 import com.sendmoney.kaffka.sendmoney.models.Transfer;
 import com.sendmoney.kaffka.sendmoney.net.NeonTestService;
 import com.sendmoney.kaffka.sendmoney.net.callbacks.GetTransfersCallback;
-import com.sendmoney.kaffka.sendmoney.net.callbacks.SendMoneyCallback;
 
 import java.util.List;
 
@@ -35,7 +34,7 @@ public class GetTransfersJob {
             @Override
             public void onResponse(Call<List<Transfer>> call, Response<List<Transfer>> response) {
                 if (response.isSuccessful()) {
-                    getTransfersCallback.onGetTrasfersSuccess(response.body());
+                    getTransfersCallback.onGetTransfersSuccess(response.body());
                     return;
                 }
                 getTransfersCallback.onGetTransfersError();

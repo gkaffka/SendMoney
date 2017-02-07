@@ -25,7 +25,7 @@ public class SendMoneyJob {
         this.context = context;
     }
 
-    public void sendMoney(String clientId, double value) {
+    public void sendMoney(long clientId, double value) {
         String token = new Preferences(context).getToken();
         SendMoneyApplication.getInstance().getRetrofitClient().create(NeonTestService.class).sendMoney(clientId, token, value).enqueue(new Callback<Boolean>() {
             @Override

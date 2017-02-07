@@ -9,6 +9,6 @@ import java.util.List;
  */
 
 public interface GetTransfersCallback {
-    void onGetTrasfersSuccess(List<Transfer> transfers);
+    void onGetTransfersSuccess(List<Transfer> transfers);
     void onGetTransfersError();
 }

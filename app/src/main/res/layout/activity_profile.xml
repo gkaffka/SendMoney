@@ -69,6 +69,7 @@
             <Button
                 style="@style/ButtonStyleBlue"
                 android:layout_marginTop="8dp"
+                android:onClick="@{viewmodel.openTransactionHistoryClick}"
                 android:text="@string/money_sent_history"/>
         </LinearLayout>
 

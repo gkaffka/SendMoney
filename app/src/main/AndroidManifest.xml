@@ -26,6 +26,11 @@
             android:name=".activity.ContactsActivity"
             android:parentActivityName=".activity.ProfileActivity"
             android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.TransactionHistoryActivity"
+            android:parentActivityName=".activity.ProfileActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

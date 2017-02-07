@@ -7,49 +7,29 @@ package com.sendmoney.kaffka.sendmoney.models;
 public class Contact {
 
     private String name;
-    private String id;
-    private String avatarUrl;
-    private double amountReceived;
+    private long id;
 
     public Contact() {
     }
 
-    public Contact(String name, String id, String avatarUrl, double amountReceived) {
+    public Contact(String name, long id) {
         this.name = name;
         this.id = id;
-        this.avatarUrl = avatarUrl;
-        this.amountReceived = amountReceived;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
-    }
-
-    public String getAvatarUrl() {
-        return avatarUrl;
-    }
-
-    public double getAmountReceived() {
-        return amountReceived;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
-    }
-
-    public void setAvatarUrl(String avatarUrl) {
-        this.avatarUrl = avatarUrl;
-    }
-
-    public void setAmountReceived(double amountReceived) {
-        this.amountReceived = amountReceived;
     }
 }

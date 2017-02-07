@@ -3,9 +3,12 @@ package com.sendmoney.kaffka.sendmoney;
 import android.app.Application;
 import android.support.annotation.NonNull;
 
+import com.sendmoney.kaffka.sendmoney.models.Contact;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import io.realm.Realm;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -20,12 +23,12 @@ public class SendMoneyApplication extends Application {
     private static SendMoneyApplication instance;
     public static final String BASE_URL = "http://processoseletivoneon.azurewebsites.net/";
     private Retrofit defaultRetrofit;
+    private List<Contact> contactList;
 
     @Override
     public void onCreate() {
         instance = this;
         super.onCreate();
-        Realm.init(this);
     }
 
     public static SendMoneyApplication getInstance() {
@@ -57,6 +60,29 @@ public class SendMoneyApplication extends Application {
             defaultRetrofit = configureRetrofit(BASE_URL);
         }
         return defaultRetrofit;
+    }
+
+    public List<Contact> getContacts() {
+        contactList = new ArrayList<>();
+        contactList.add(new Contact("Morpheus Pimpão", 1));
+        contactList.add(new Contact("Trinity Cançada", 2));
+        contactList.add(new Contact("The Oracle", 3));
+        contactList.add(new Contact("Agent Smith", 4));
+        contactList.add(new Contact("Mr. Anderson", 5));
+        contactList.add(new Contact("Agent Jones", 6));
+        contactList.add(new Contact("Cypher Safadão", 7));
+        contactList.add(new Contact("Spoon Boy", 8));
+        contactList.add(new Contact("Tank Sumido", 9));
+        contactList.add(new Contact("Dozer Danado", 10));
+        contactList.add(new Contact("The One", 11));
+        contactList.add(new Contact("The Two", 12));
+        contactList.add(new Contact("The The", 13));
+        contactList.add(new Contact("Dujour Dujour", 14));
+        contactList.add(new Contact("Mouse Mickey", 15));
+        contactList.add(new Contact("Finn Thehumnan", 16));
+        contactList.add(new Contact("Jake Thedog", 17));
+        contactList.add(new Contact("Mr. Bombastic", 18));
+        return contactList;
     }
 
 }

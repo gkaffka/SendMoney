@@ -81,6 +81,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:layout_weight="2"
+                    android:inputType="number"
                     android:hint="@string/value_hint"/>
 
                 <TextView

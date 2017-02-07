@@ -31,7 +31,7 @@ public class SendMoneyDialogFragment extends DialogFragment implements SendMoney
         // Supply num input as an argument.
         Bundle args = new Bundle();
         args.putString("name", contact.getName());
-        args.putString("id", contact.getId());
+        args.putLong("id", contact.getId());
         f.setArguments(args);
         return f;
     }
@@ -66,7 +66,7 @@ public class SendMoneyDialogFragment extends DialogFragment implements SendMoney
     }
 
     private void initContact() {
-        contact = new Contact(getArguments().getString("name"), getArguments().getString("id"), null, 0);
+        contact = new Contact(getArguments().getString("name"), getArguments().getLong("id"));
     }
 
     @Override

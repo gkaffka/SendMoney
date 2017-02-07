@@ -22,7 +22,7 @@ public interface NeonTestService {
 
     @FormUrlEncoded
     @POST("/SendMoney")
-    Call<Boolean> sendMoney(@Field("ClienteId") String clientId, @Field("token") String token, @Field("valor") double value);
+    Call<Boolean> sendMoney(@Field("ClienteId") long clientId, @Field("token") String token, @Field("valor") double value);
 
     @GET("/GetTransfers")
     Call<List<Transfer>> getTransfers(@Query("token") String token);

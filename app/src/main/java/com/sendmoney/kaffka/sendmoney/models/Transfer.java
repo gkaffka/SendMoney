@@ -2,11 +2,13 @@ package com.sendmoney.kaffka.sendmoney.models;
 
 import com.google.gson.annotations.SerializedName;
 
+import io.realm.RealmObject;
+
 /**
  * Created by kaffka on 04/02/2017.
  */
 
-public class Transfer {
+public class Transfer extends RealmObject {
 
     @SerializedName("Id")
     private long id;

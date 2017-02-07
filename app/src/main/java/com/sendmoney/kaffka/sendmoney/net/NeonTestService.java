@@ -21,9 +21,9 @@ public interface NeonTestService {
     Call<String> getToken(@Query("nome") String name, @Query("email") String email);
 
     @FormUrlEncoded
-    @POST
+    @POST("/SendMoney")
     Call<Boolean> sendMoney(@Field("ClienteId") String clientId, @Field("token") String token, @Field("valor") double value);
 
-    @GET
+    @GET("/GetTransfers")
     Call<List<Transfer>> getTransfers(@Query("token") String token);
 }

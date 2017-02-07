@@ -36,7 +36,7 @@ public class ContactsActivity extends AppCompatActivity {
     private void initRecyclerView() {
         recyclerView = (RecyclerView) findViewById(R.id.contactList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new ContactsAdapter(contactList, this));
+        recyclerView.setAdapter(new ContactsAdapter(contactList));
     }
 
     private void initToolbar(){

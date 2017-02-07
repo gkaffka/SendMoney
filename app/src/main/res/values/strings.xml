@@ -5,7 +5,12 @@
     <string name="user_avatar_url">https://media.tenor.co/images/7f7f2882899755a705a2953b6fcfc263/raw</string>
     <string name="money_sent_history">Histórico de envios</string>
     <string name="send_money">Enviar dinheiro</string>
+    <string name="send_money_to">Enviar dinheiro para:</string>
     <string name="loading">Loading…</string>
     <string name="error">system failure</string>
     <string name="contacts">Contatos</string>
+    <string name="value_hint">000</string>
+    <string name="send">ENVIAR</string>
+    <string name="money_symbol_br">R$</string>
+    <string name="money_sent_success">Dinheiro enviado.</string>
 </resources>

@@ -25,7 +25,7 @@ public class ProfileActivity extends AppCompatActivity implements GenerateTokenC
     }
 
     private void initTokenService(){
-        new GenerateTokenJob(this).generateToken(getString(R.string.app_name), getString(R.string.user_email));
+        new GenerateTokenJob(this).generateToken(getString(R.string.user_name), getString(R.string.user_email));
     }
 
     @Override

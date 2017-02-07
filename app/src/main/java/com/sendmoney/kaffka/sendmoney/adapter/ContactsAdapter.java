@@ -20,11 +20,9 @@ import java.util.List;
 public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ContactViewHolder> {
 
     private List<Contact> contactList;
-    private Context context;
 
-    public ContactsAdapter(List<Contact> contactList, Context context) {
+    public ContactsAdapter(List<Contact> contactList) {
         this.contactList = contactList;
-        this.context = context;
     }
 
     @Override
@@ -34,7 +32,7 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.Contac
 
     @Override
     public void onBindViewHolder(ContactViewHolder holder, int position) {
-        holder.contactItemBinding.setViewmodel(new ContactViewModel(contactList.get(position), context));
+        holder.contactItemBinding.setViewmodel(new ContactViewModel(contactList.get(position)));
     }
 
     @Override

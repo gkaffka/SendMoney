@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 
 import java.util.concurrent.TimeUnit;
 
+import io.realm.Realm;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -24,6 +25,7 @@ public class SendMoneyApplication extends Application {
     public void onCreate() {
         instance = this;
         super.onCreate();
+        Realm.init(this);
     }
 
     public static SendMoneyApplication getInstance() {

@@ -36,10 +36,27 @@
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:fontFamily">serif-monospace</item>
     </style>
+    
+    <style name="TextStyleBig" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:fontFamily">serif-monospace</item>
+    </style>
 
     <style name="TextStyleInitials" parent="TextAppearance.AppCompat">
         <item name="android:textSize">22sp</item>
         <item name="android:fontFamily">serif-monospace</item>
     </style>
 
+    <style name="EditTextStyle" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">serif-monospace</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:maxLength">6</item>
+        <item name="android:textCursorDrawable">@drawable/green_cursor</item>
+        <item name="android:backgroundTint">@color/black</item>
+    </style>
 </resources>

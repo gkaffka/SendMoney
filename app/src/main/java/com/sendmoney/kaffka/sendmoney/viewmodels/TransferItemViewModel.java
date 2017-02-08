@@ -13,8 +13,8 @@ import java.text.SimpleDateFormat;
 
 public class TransferItemViewModel extends BaseObservable {
 
-    private Contact contact;
-    private Transfer transfer;
+    private final Contact contact;
+    private final Transfer transfer;
 
     public TransferItemViewModel(Contact contact, Transfer transfer) {
         this.contact = contact;

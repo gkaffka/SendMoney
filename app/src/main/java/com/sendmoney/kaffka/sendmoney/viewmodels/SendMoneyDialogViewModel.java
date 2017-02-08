@@ -11,7 +11,7 @@ import com.sendmoney.kaffka.sendmoney.models.Contact;
 
 public class SendMoneyDialogViewModel extends BaseObservable {
 
-    private Contact contact;
+    private final Contact contact;
 
     public SendMoneyDialogViewModel(Contact contact) {
         this.contact = contact;

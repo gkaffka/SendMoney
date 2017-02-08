@@ -15,11 +15,9 @@ public class Preferences {
     private static final String TOKEN = "com.sendmoney.kaffka.sendmoney.token";
 
     private final SharedPreferences preference;
-    private final Gson gson;
 
     public Preferences(Context context) {
         this.preference = context.getSharedPreferences(PREFERENCE, Context.MODE_PRIVATE);
-        this.gson = new Gson();
     }
 
     public String getToken() {

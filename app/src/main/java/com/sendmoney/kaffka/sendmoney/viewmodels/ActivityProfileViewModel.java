@@ -20,7 +20,7 @@ import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
 public class ActivityProfileViewModel extends BaseObservable {
 
-    private Context context;
+    private final Context context;
 
     public ActivityProfileViewModel(Context context) {
         this.context = context;

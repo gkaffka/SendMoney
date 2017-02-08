@@ -21,10 +21,6 @@ import java.util.List;
 
 public class ContactsActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
-
-    private Toolbar toolbar;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,13 +30,13 @@ public class ContactsActivity extends AppCompatActivity {
     }
 
     private void initRecyclerView() {
-        recyclerView = (RecyclerView) findViewById(R.id.contactList);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.contactList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new ContactsAdapter(SendMoneyApplication.getInstance().getContacts()));
     }
 
     private void initToolbar(){
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(R.string.contacts);
         getSupportActionBar().setHomeButtonEnabled(true);

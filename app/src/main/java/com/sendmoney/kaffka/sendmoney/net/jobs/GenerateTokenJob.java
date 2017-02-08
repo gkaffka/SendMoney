@@ -14,7 +14,7 @@ import retrofit2.Response;
 
 public class GenerateTokenJob {
 
-    private GenerateTokenCallback generateTokenCallback;
+    private final GenerateTokenCallback generateTokenCallback;
 
     public GenerateTokenJob(GenerateTokenCallback generateTokenCallback) {
         this.generateTokenCallback = generateTokenCallback;

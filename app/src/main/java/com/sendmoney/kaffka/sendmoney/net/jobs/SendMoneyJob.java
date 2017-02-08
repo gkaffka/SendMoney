@@ -17,8 +17,8 @@ import retrofit2.Response;
 
 public class SendMoneyJob {
 
-    private SendMoneyCallback sendMoneyCallback;
-    private Context context;
+    private final SendMoneyCallback sendMoneyCallback;
+    private final Context context;
 
     public SendMoneyJob(SendMoneyCallback sendMoneyCallback, Context context) {
         this.sendMoneyCallback = sendMoneyCallback;

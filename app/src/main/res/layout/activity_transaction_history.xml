@@ -20,6 +20,7 @@
     </android.support.design.widget.AppBarLayout>
 
     <TextView
+        android:id="@+id/text_loading"
         style="@style/TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

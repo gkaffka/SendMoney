@@ -20,7 +20,7 @@ import com.sendmoney.kaffka.sendmoney.models.Contact;
 
 public class ContactViewModel extends BaseObservable {
 
-    private Contact contact;
+    private final Contact contact;
 
     public ContactViewModel(Contact contact) {
         this.contact = contact;
@@ -51,7 +51,7 @@ public class ContactViewModel extends BaseObservable {
         };
     }
 
-    void showDialog(AppCompatActivity context) {
+    private void showDialog(AppCompatActivity context) {
         FragmentTransaction ft = context.getSupportFragmentManager().beginTransaction();
         Fragment prev = context.getSupportFragmentManager().findFragmentByTag("dialog");
         if (prev != null) {

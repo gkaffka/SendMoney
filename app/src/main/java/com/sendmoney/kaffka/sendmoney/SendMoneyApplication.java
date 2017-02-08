@@ -21,7 +21,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class SendMoneyApplication extends Application {
 
     private static SendMoneyApplication instance;
-    public static final String BASE_URL = "http://processoseletivoneon.azurewebsites.net/";
+    private static final String BASE_URL = "http://processoseletivoneon.azurewebsites.net/";
     private Retrofit defaultRetrofit;
     private List<Contact> contactList;
 
@@ -49,11 +49,10 @@ public class SendMoneyApplication extends Application {
     private OkHttpClient getOkHttpClient() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor)
+        return new OkHttpClient.Builder().addInterceptor(interceptor)
                 .connectTimeout(30, TimeUnit.SECONDS)
                 .readTimeout(30, TimeUnit.SECONDS)
                 .build();
-        return client;
     }
 
     public Retrofit getRetrofitClient() {
@@ -67,7 +66,7 @@ public class SendMoneyApplication extends Application {
         return contactList;
     }
 
-    private void initContactList(){
+    private void initContactList() {
         contactList = new ArrayList<>();
         contactList.add(new Contact("Morpheus Pimpão", 1));
         contactList.add(new Contact("Trinity Cançada", 2));
@@ -89,7 +88,7 @@ public class SendMoneyApplication extends Application {
         contactList.add(new Contact("Mr. Bombastic", 18));
     }
 
-    public void resetContactsTotals(){
+    public void resetContactsTotals() {
         initContactList();
     }
 }

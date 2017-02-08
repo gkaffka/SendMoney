@@ -20,8 +20,8 @@ import retrofit2.Response;
 
 public class GetTransfersJob {
 
-    private GetTransfersCallback getTransfersCallback;
-    private Context context;
+    private final GetTransfersCallback getTransfersCallback;
+    private final Context context;
 
     public GetTransfersJob(GetTransfersCallback getTransfersCallback, Context context) {
         this.getTransfersCallback = getTransfersCallback;

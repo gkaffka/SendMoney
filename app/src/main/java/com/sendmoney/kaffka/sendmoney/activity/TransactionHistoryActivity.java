@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.widget.TextView;
 
 import com.sendmoney.kaffka.sendmoney.R;
 import com.sendmoney.kaffka.sendmoney.adapter.TransfersAdapter;
@@ -23,24 +24,25 @@ import java.util.List;
 public class TransactionHistoryActivity extends AppCompatActivity implements GetTransfersCallback {
 
     private RecyclerView recyclerView;
-    private Toolbar toolbar;
+    private TextView status;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaction_history);
-        initRecyclerView();
+        initViews();
         initToolbar();
         initService();
     }
 
-    private void initRecyclerView() {
+    private void initViews() {
         recyclerView = (RecyclerView) findViewById(R.id.transferList);
+        status = (TextView) findViewById(R.id.text_loading);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     private void initToolbar() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(R.string.history);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -55,7 +57,7 @@ public class TransactionHistoryActivity extends AppCompatActivity implements Get
 
     @Override
     public void onGetTransfersError() {
-
+        status.setText(R.string.error);
     }
 
     private void initService() {

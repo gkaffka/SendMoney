@@ -15,7 +15,6 @@ import com.sendmoney.kaffka.sendmoney.models.Contact;
 import com.sendmoney.kaffka.sendmoney.models.Transfer;
 import com.sendmoney.kaffka.sendmoney.viewmodels.TransferItemViewModel;
 
-import java.text.DecimalFormat;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -26,7 +25,7 @@ import java.util.List;
 
 public class TransfersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<Transfer> transferList;
+    private final List<Transfer> transferList;
     private static final int VIEW_TYPE_GRAPH = 0;
     private static final int VIEW_TYPE_ITEM = 1;
 
@@ -127,7 +126,7 @@ public class TransfersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         TextView contactInitial = (TextView) lin.findViewById(R.id.textContactInitial);
         TextView contactBar = (TextView) lin.findViewById(R.id.textGraphBar);
         TextView contactValue = (TextView) lin.findViewById(R.id.tetxContactTotal);
-        String totalFormatted = total > 1000 ? String.valueOf(total).substring(0, 3) + "k" : (int) total + "";
+        String totalFormatted = total > 1000 ? String.valueOf((int)total/1000) + "k" : (int) total + "";
         contactValue.setText(totalFormatted);
         contactInitial.setText(getContactInitials(contact.getName()));
         contactInitial.setTextColor(getContactInitialsColor(contact.getName()));

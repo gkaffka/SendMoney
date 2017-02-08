@@ -13,7 +13,6 @@ import com.sendmoney.kaffka.sendmoney.models.Transfer;
 import com.sendmoney.kaffka.sendmoney.net.callbacks.GetTransfersCallback;
 import com.sendmoney.kaffka.sendmoney.net.jobs.GetTransfersJob;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 

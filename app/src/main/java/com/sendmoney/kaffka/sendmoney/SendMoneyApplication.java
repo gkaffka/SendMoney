@@ -29,6 +29,7 @@ public class SendMoneyApplication extends Application {
     public void onCreate() {
         instance = this;
         super.onCreate();
+        initContactList();
     }
 
     public static SendMoneyApplication getInstance() {
@@ -63,6 +64,10 @@ public class SendMoneyApplication extends Application {
     }
 
     public List<Contact> getContacts() {
+        return contactList;
+    }
+
+    private void initContactList(){
         contactList = new ArrayList<>();
         contactList.add(new Contact("Morpheus Pimpão", 1));
         contactList.add(new Contact("Trinity Cançada", 2));
@@ -82,7 +87,9 @@ public class SendMoneyApplication extends Application {
         contactList.add(new Contact("Finn Thehumnan", 16));
         contactList.add(new Contact("Jake Thedog", 17));
         contactList.add(new Contact("Mr. Bombastic", 18));
-        return contactList;
     }
 
+    public void resetContactsTotals(){
+        initContactList();
+    }
 }

@@ -8,6 +8,7 @@ public class Contact {
 
     private String name;
     private long id;
+    private double total;
 
     public Contact() {
     }
@@ -31,5 +32,13 @@ public class Contact {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
     }
 }

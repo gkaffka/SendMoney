@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/graph_item_view"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/black"
+              android:orientation="vertical"
+              android:paddingBottom="16dp"
+              android:paddingLeft="12dp"
+              android:paddingRight="12dp"
+              android:paddingTop="16dp">
+
+    <FrameLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@drawable/green_circle">
+
+        <TextView
+            android:id="@+id/textContactInitial"
+            style="@style/TextStyleInitials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/textGraphBar"
+        style="@style/TextStyle"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:lineSpacingMultiplier="0.8"
+        tools:text="#\n$\n#\n#\n#"/>
+
+    <TextView
+        android:id="@+id/tetxContactTotal"
+        style="@style/TextStyle"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        tools:text="1000"/>
+
+</LinearLayout>

@@ -52,8 +52,10 @@ public class SendMoneyDialogFragment extends DialogFragment implements SendMoney
         sendMoneyDialogBindin.sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new SendMoneyJob(SendMoneyDialogFragment.this, v.getContext()).sendMoney(contact.getId(), Double.parseDouble(sendMoneyDialogBindin.edittextValue.getText().toString()));
-                sendMoneyDialogBindin.textLoading.setVisibility(View.VISIBLE);
+                if (sendMoneyDialogBindin.edittextValue.length() > 0) {
+                    new SendMoneyJob(SendMoneyDialogFragment.this, v.getContext()).sendMoney(contact.getId(), Double.parseDouble(sendMoneyDialogBindin.edittextValue.getText().toString()));
+                    sendMoneyDialogBindin.textLoading.setVisibility(View.VISIBLE);
+                }
             }
         });
         return v;
@@ -77,7 +79,7 @@ public class SendMoneyDialogFragment extends DialogFragment implements SendMoney
             public void run() {
                 getDialog().dismiss();
             }
-        },1000);
+        }, 1000);
 
     }
 
@@ -89,6 +91,6 @@ public class SendMoneyDialogFragment extends DialogFragment implements SendMoney
             public void run() {
                 getDialog().dismiss();
             }
-        },1000);
+        }, 1000);
     }
 }

@@ -32,6 +32,7 @@ public class ContactsActivity extends AppCompatActivity {
     private void initRecyclerView() {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.contactList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        SendMoneyApplication.getInstance().resetContactsTotals();
         recyclerView.setAdapter(new ContactsAdapter(SendMoneyApplication.getInstance().getContacts()));
     }
 
